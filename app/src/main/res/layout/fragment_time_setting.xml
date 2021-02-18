@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_time_setting"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:alpha="0.65"
+    android:background="#FFFFFF"
+    android:backgroundTint="#9ea6cd"
+    tools:context=".timesetting.TimeSetting">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="144dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/ic_time"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="16dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.0"
+        tools:context=".dailyWaterTable.DailyWaterTable">
+
+        <TextView
+            android:id="@+id/start_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/aclonica"
+            android:text="@string/StartTime"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/start_time_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/timerButtonText"
+            android:textColor="@color/primaryTextColor"/>
+
+        <TextView
+            android:id="@+id/end_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/aclonica"
+            android:text="@string/EndTime"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/end_time_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@string/timerButtonText"
+            android:textColor="@color/primaryTextColor"/>
+
+        <Button
+            android:id="@+id/save_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@string/saveButtonText"
+            android:textColor="@color/primaryTextColor"/>
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

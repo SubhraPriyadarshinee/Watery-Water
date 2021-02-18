@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/zeroTime">
+    <fragment
+        android:id="@+id/zeroTime"
+        android:name="com.mypractice.waterywater.grid.ZeroTime"
+        android:label="fragment_zero_time"
+        tools:layout="@layout/fragment_zero_time">
+        <action
+            android:id="@+id/action_zeroTime_to_timeSetting"
+            app:destination="@id/timeSetting" />
+        <argument
+            android:name="startTime"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="endTime"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+    <fragment
+        android:id="@+id/timeSetting"
+        android:name="com.mypractice.waterywater.timesetting.TimeSetting"
+        android:label="fragment_time_setting"
+        tools:layout="@layout/fragment_time_setting">
+        <action
+            android:id="@+id/action_timeSetting_to_zeroTime"
+            app:destination="@id/zeroTime" />
+    </fragment>
+    <fragment
+        android:id="@+id/waterGrids"
+        android:name="com.mypractice.waterywater.calendarview.WaterGrids"
+        android:label="fragment_water_grids"
+        tools:layout="@layout/fragment_water_grids" />
+    <fragment
+        android:id="@+id/oneAndOnlyFragment"
+        android:name="com.mypractice.waterywater.oneAndOnlyFragment"
+        android:label="fragment_one_and_only"
+        tools:layout="@layout/fragment_one_and_only" />
+</navigation>
